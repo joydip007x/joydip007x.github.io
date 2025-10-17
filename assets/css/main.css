@@ -986,6 +986,76 @@ hr {
           .row.gtr-200.gtr-uniform > * {
             padding-top: 3em; } }
 
+/* Small timeline for job roles under a single company */
+.position-timeline {
+  position: relative;
+  margin: 0.5em 0 0 0;
+  padding-left: 2.75em; /* space for line + markers */
+  display: block;
+}
+
+/* vertical connecting line */
+.position-timeline:before {
+  content: "";
+  position: absolute;
+  left: 1.125rem; /* aligns with markers */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #f56a6a;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+/* each timeline item */
+.position-timeline .timeline-item {
+  position: relative;
+  margin: 0.5em 0;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* circular markers */
+.position-timeline .marker {
+  position: absolute;
+  left: 0.725rem; /* centers on the line */
+  top: 0.45rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #f56a6a;
+  box-shadow: 0 0 6px rgba(245,106,106,0.12);
+}
+
+/* role content */
+.position-timeline .role {
+  margin-left: 1.1rem;
+  color: inherit;
+}
+
+/* small note style */
+.timeline-note {
+  margin-top: 0.5em;
+  color: #6b7074;
+  font-size: 0.85em;
+}
+
+/* responsive tweaks */
+@media screen and (max-width: 736px) {
+  .position-timeline {
+    padding-left: 1.5rem;
+  }
+  .position-timeline:before {
+    left: 0.875rem;
+  }
+  .position-timeline .marker {
+    left: 0.5rem;
+    top: 0.4rem;
+  }
+}
+
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
